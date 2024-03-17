@@ -161,7 +161,7 @@ article {
   }
 
   .wrapper {
-    background-color: blue;
+    background-color: white;
     display: grid;
     width: 500px;
     height: 700px;
@@ -186,11 +186,16 @@ article {
     font-size: 1rem;
   }
 
+  .share {
+    z-index: 1;
+  }
+
   .share-hidden {
     bottom: -67%;
-    right: 115%;
-    padding: 30px 104px;
+    right: -90%;
+    padding: 30px 140px;
     border-radius: 15px;
+    z-index: -1;
   }
 
   .share-hidden::after {
@@ -204,3 +209,82 @@ article {
     font-size: 1.5rem;
   }
 }
+
+@media screen and (max-width: 375px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8rem;
+  }
+
+  .container {
+    min-width: 100vh;
+  }
+
+  .wrapper {
+    background-color: white;
+    display: grid;
+    width: 375px;
+    height: 700px;
+  }
+
+  .image-side img {
+    height: 350px;
+    width: 375px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .mini-wrapper {
+    width: px;
+    padding: 2rem;
+  }
+
+  .description h1 {
+    font-size: 1.2rem;
+    width: 25ch;
+  }
+
+  .description p {
+    font-size: 0.9rem;
+    width: 35ch;
+  }
+
+  .share {
+    z-index: 1;
+  }
+
+  .footer {
+    justify-content: unset;
+  }
+
+  .profile {
+    margin-right: 4rem;
+  }
+
+  .share-hidden {
+    bottom: -49%;
+    right: -75%;
+    padding: 32px 94px;
+    border-radius: 15px;
+    z-index: -1;
+  }
+
+  .share-hidden::after {
+    display: none;
+    /* position: relative; */
+  }
+
+  .share-button {
+    margin-top: 1.5rem;
+  }
+
+  .text {
+    font-size: 3rem;
+  }
+  .share-hidden a {
+    font-size: 1.5rem;
+  }
+}
+
